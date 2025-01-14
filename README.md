@@ -1,6 +1,6 @@
 # OMIM converter
 
-![banner]()
+![omim_converter-BANNER](https://github.com/user-attachments/assets/55f1cb83-c79b-4eae-a286-c80027a7766c)
 
 This streamline JavaScript tool can be added to any website or browser application very easily: it converts [Monarch Initiative](https://monarchinitiative.org)'s IDs for diseases, genes and phenotypes (i.e. respectively 'MONDO:', 'HGNC:' and 'HP:') to [OMIM](https://www.omim.org) IDs -and viceversa.
 
@@ -10,7 +10,7 @@ This streamline JavaScript tool can be added to any website or browser applicati
 
 Once added to your .html configuration, it can accept either Monarch Initiative's IDs or OMIM IDs and convert them. It fetches corresponding IDs from mapping files `monarch-omim.json and `omim-monarch.json`.
 
-![json_files]()
+![json_files](https://github.com/user-attachments/assets/90c63a2e-4405-40ad-80eb-b51093ab02d7)
 
 Both are necessary to avoid that when looking for OMIM IDs in the `monarch-omim.json` file, it iterates through each element taking a lot of time.
 
