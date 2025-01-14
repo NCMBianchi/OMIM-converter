@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monarch-OMIM Mapper Test</title>
+</head>
+<body>
+    <h2>Monarch-OMIM Mapper Test</h2>
+    
+    <div>
+        <h3>Monarch ID to OMIM</h3>
+        <input type="text" id="monarchInput" placeholder="Enter Monarch ID (e.g., MONDO:0007947)">
+        <button onclick="convertMonarchToOmim()">Convert</button>
+        <div id="monarchResult"></div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <h3>OMIM to Monarch ID</h3>
+        <input type="text" id="omimInput" placeholder="Enter OMIM ID (e.g., 154700)">
+        <button onclick="convertOmimToMonarch()">Convert</button>
+        <div id="omimResult"></div>
+    </div>
+
+    <script src="mapper.js"></script>
+    <script>
+        const mapper = new MonarchOmimMapper();
+
+        async function convertMonarchToOmim() {
+            const monarchId = document.getElementById('monarchInput').value;
+            const result = mapper.getMonarchToOmim(monarchId);
+            document.getElementById('monarchResult').textContent = 
+                result ? JSON.stringify(result, null, 2) : 'Not found';
+        }
+
+        async function convertOmimToMonarch() {
+            const omimId = document.getElementById('omimInput').value;
+            const result = mapper.getOmimToMonarch(omimId);
+            document.getElementById('omimResult').textContent = 
+                result ? JSON.stringify(result, null, 2) : 'Not found';
+        }
+    </script>
+</body>
+</html>
